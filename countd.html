@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Count Days between Dates</title>
+	<script>
+		function countDays() {
+			// Get the start and end date values from the form
+			var startDate = document.getElementById("start-date").value;
+			var endDate = document.getElementById("end-date").value;
+			
+			// Convert the date strings into Date objects
+			var start = new Date(startDate);
+			var end = new Date(endDate);
+			
+			// Calculate the difference in days
+			var days = Math.floor((end - start) / (1000 * 60 * 60 * 24));
+			
+			// Update the result element with the number of days
+			document.getElementById("result").value =  days;
+		}
+	</script>
+</head>
+<body>
+
+	<div class="container">
+		<h1>Count Days between Dates</h1>
+		<form>
+			<div class="form-group">
+				<label for="start-date">Start Date:</label>
+				<input type="date" class="form-control" id="start-date" name="start-date" required>
+			</div>
+			<div class="form-group">
+				<label for="end-date">End Date:</label>
+				<input type="date" class="form-control" id="end-date" name="end-date" required>
+			</div>
+			<button type="button" class="btn btn-primary" onclick="countDays()">Count Days</button>
+		</form>
+		<input type="text" id="result" value="">
+	</div>
+
+</body>
+</html>

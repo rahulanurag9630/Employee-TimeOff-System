@@ -1,0 +1,73 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <script type="text/javascript">
+    var a = 33;
+    var b = 45;
+    window.onload = function () {
+      var chart1 = new CanvasJS.Chart("chartContainer1", {
+        title: {
+          text: "Chart 1"
+        },
+        data: [
+          {
+            type: "doughnut",
+            dataPoints: [
+              { y: a, indexLabel: "Android" },
+              { y: b, indexLabel: "Apple iOS" },
+              { y: 10, indexLabel: " iOS" }
+             
+            ]
+          }
+        ]
+      });
+
+      var chart2 = new CanvasJS.Chart("chartContainer2", {
+        title: {
+          text: "Chart 2"
+        },
+        data: [
+          {
+            type: "doughnut",
+            dataPoints: [
+              { y: b, indexLabel: "Android" },
+              { y: 25.0, indexLabel: "Apple iOS" },
+             
+            ]
+          }
+        ]
+      });
+      var chart3 = new CanvasJS.Chart("chartContainer3", {
+        title: {
+          text: "Chart 2"
+        },
+        data: [
+          {
+            type: "doughnut",
+            dataPoints: [
+              { y: 4, indexLabel: "Android" },
+              { y: 16, indexLabel: "Apple iOS" },
+             
+            ]
+          }
+        ]
+      });
+
+      chart1.render();
+      chart2.render();
+      chart3.render();
+    }
+  </script>
+
+  <script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+</head>
+<body>
+  <div class="row">
+    <div id="chartContainer1" class="col-4" style="height: 300px; width: auto; display: inline-block;"></div>
+  <div id="chartContainer2" class="col-4" style="height: 300px; width: auto; display: inline-block;"></div>
+  <div id="chartContainer3" class="col-4" style="height: 300px; width: auto; display: inline-block;"></div>
+</div>
+</body>
+</html>
